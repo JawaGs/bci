@@ -7,7 +7,7 @@
           <b-icon
             
             :icon="icon"
-            size="is-large"
+            size="is-medium"
             :type="type"
           />
           <p>{{text}}</p>
@@ -37,21 +37,26 @@ export default {
   }
 }
 </script>
-<style lang="css" scoped>
+<style lang="scss" scoped>
   .icono{
     display: flex
   }
-  p{
-    margin: 12px
-  }
+  
   .card{
-    width: 310px;
+    width: 230px;
+    height: 70px;
+    font-size: 12px;
     border-radius: 10px;
     transition: all 0.1s ease-out;
-    padding: 0px 0
+    -webkit-box-shadow: 0px -1px 18px -3px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px -1px 18px -3px rgba(0,0,0,0.7);
+    box-shadow: 0px -1px 18px -3px rgba(0,0,0,0.7);
+    p{
+      margin: 5px 0 0 10px
+    }
+    i{
+      font-size: 1px
+    }
   }
-  .card:hover{
-    width: 320px;
-    padding: 0 25px 0 0
-  }
+
 </style>

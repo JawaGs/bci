@@ -1,6 +1,6 @@
 <template>
     <section> 
-        <div style="display: flex" class="contenedor">
+        <div style="display: flex" class="contenedor container">
             <div>
                 <div class="circulos">
                     <div style="background:#28a745" class="circulo"></div>
@@ -13,13 +13,13 @@
                     <h2>Descubre los contenidos que hemos preparado para que hagas crecer tu negocio de manera sostenible.</h2>
                 </div>
             </div>
-            <div class="rojo_bi">
+            <div class="rojo_bci">
                 <div class="logo_master">
-                    <div style="marginLeft: -90px; marginTop:-60px" class="circunferencia"></div>
-                    <div style="marginLeft: -250px; marginTop:-58px" class="circunferencia"></div>
+                    <div  class="circunferencia1"></div>
+                    <div  class="circunferencia2"></div>
                 </div>
                 <img src="../assets/img/rojo.png" alt="bci_rojo">
-                <div style="margin: -280px 0 0 -40px" class="botones">
+                <div style="margin: -220px 0 0 -30px" class="botones">
                     <card
                         text="Ver calendarios"
                         icon="calendar"
@@ -34,7 +34,7 @@
                     >
                     </card>
                 </div>
-                <div style="margin: -270px 0 0 520px" class="botones">
+                <div style="margin: -220px 0 0 410px" class="botones">
                     <card
                         text="Santiago"
                         icon="home"
@@ -64,67 +64,82 @@ export default {
     }
 }
 </script>
-<style lang="css" scoped>
+<style lang="scss" scoped>
     section{
         width: 100vw;
     }
     .conntenedor{
         height: 500px;
-        width: 60% !important;
+        
         
     }
     .circulos{
-        margin: 10% 0 0.5% 18.5%;
+        margin: 60px 0 10px 5px;
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        width: 7% 
+        width: 60px ;
+        .circulo{
+            width: 5px;
+            height: 5px;
+            background: rgb(246, 156, 85);
+            border-radius: 50%;
+        }
     }
-    .circulo{
-        width: 5px;
-        height: 5px;
-        background: rgb(246, 156, 85);
-        border-radius: 50%;
-    }
+    
     .textos{
-        width: 73.5%;
+        width: 540px;
+        margin: 10px 0 0 0;
+        h1{
+            color: rgb(84, 110, 122);
+            font-size: 40px;
+            margin-bottom: 10px;
+            line-height: 1
+        }
+        span{
+            color: #28a745;
+            font-weight: 600
+        }
+        h2{
+            margin: 0 80px 150px 0 ;
+            opacity: 0.78;
+        }
     }
-    h1{
-        color: rgb(84, 110, 122);
-        font-size: 40px;
-        margin: 0 0 5% 25%;
-        line-height: 1
-    }
-    span{
-        color: #28a745;
-        font-weight: 600
-    }
-    h2{
-        margin: 1% 0 0 25%;
-        opacity: 0.78;
-    }
+    
     img{
-        height: 400px;
+        height: 350px;
+        width: auto;
         position: absolute;
-        margin: -18% 0 0 8%
+        margin: -310px 0 0 100px
     }
-    .circunferencia{
-        width: 250px;
-        height: 250px;
-        z-index: -1;
-        position: relative;
-        border: 2px #999999 solid;
-        opacity: 0.4;
-        border-radius: 50%;
-    }
+    
     .logo_master{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        margin: 14% 0 0 35%
+        margin: 14% 0 0 35%;
+        .circunferencia1{
+            width: 250px;
+            height: 250px;
+            z-index: -1;
+            position: relative;
+            border: 2px #999999 solid;
+            opacity: 0.4;
+            border-radius: 50%;
+            margin: -60px 0 0 -120px
+        }
+        .circunferencia2{
+            width: 250px;
+            height: 250px;
+            z-index: -1;
+            position: relative;
+            border: 2px #999999 solid;
+            opacity: 0.4;
+            border-radius: 50%;
+            margin: -60px 0 0 -180px
+        }
     }
-    .botones .card{
-        margin: 10px 0;
-        width: 250px;
-        padding: 15px 0 15px 10px;
-        text-align: center
+
+    .rojo_bci{
+        margin-left: 2vw
     }
+    
 </style>
