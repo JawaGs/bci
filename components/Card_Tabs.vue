@@ -1,12 +1,18 @@
 <template>
   <div class="column">
-    <div  class="card">
-      
+    <div  class="card"> 
+      <label class="fecha">{{ fecha }}</label>
+      <label class="titulo">{{ titulo }}</label>
+      <label class="texto">{{ texto }}</label>
+      <label class="link">
+        <nuxt-link to="/1">MAS INFORMACION <b-icon icon="plus-circle" size="is-small" /></nuxt-link>
+      </label>
       <div class="card-image">
         <img :src="imagen" alt="Logo">
         <div class="overlay"></div>
+        
       </div>
-     
+      
     </div>
   </div>
 </template>
@@ -15,7 +21,15 @@
 export default {
   name:"CardTabs" ,   
   props: {
-    text: {
+    fecha: {
+      type: String,
+      required: true
+    },
+    titulo: {
+      type: String,
+      required: true
+    },
+    texto: {
       type: String,
       required: true
     },
@@ -39,11 +53,6 @@ export default {
     box-shadow: 0px -1px 18px -3px rgba(0,0,0,0.7);
    
 
-    
-    p{
-      margin: 5px 0 0 10px;
-      
-    }
     img{
           height: 400px;
           width: 100%;
@@ -60,6 +69,39 @@ export default {
             background: linear-gradient(to top, #000, transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     
+    .fecha{
+      position: absolute;
+      z-index: 3;
+      color: white;
+      font-size: 14px;
+      margin: 250px 30px 0 30px;
+    }
+    .titulo{
+      position: absolute;
+      z-index: 3;
+      color: white;
+      font-size: 20px;
+      margin: 270px 30px 0 30px;
+      font-weight: 600
+    }
+    .texto{
+      position: absolute;
+      z-index: 3;
+      color: white;
+      font-size: 16px;
+      margin: 300px 30px 0 30px
+    }
+    .link{
+      position: absolute;
+      z-index: 3;
+      color: white;
+      font-size: 20px;
+      margin: 355px 30px 0 30px;
+      a{
+        color: azure
+      }
+      
+    }
   }
 
 </style>

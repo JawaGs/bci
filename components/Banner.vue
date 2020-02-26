@@ -79,8 +79,8 @@ export default {
         grid-template-columns: repeat(4,1fr);
         width: 60px ;
         .circulo{
-            width: 5px;
-            height: 5px;
+            width: 7px;
+            height: 7px;
             background: rgb(246, 156, 85);
             border-radius: 50%;
         }
